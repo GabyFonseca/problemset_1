@@ -48,7 +48,7 @@ data_personas %>% select(SECUENCIA_P, ORDEN, HOGAR, DIRECTORIO, P6020, P6040, P6
 data_ocupados %>% select(SECUENCIA_P, ORDEN, HOGAR, DIRECTORIO, ocupados, INGLABO, P6920) %>% head(5)
 
 ##5.COMBINAR BASE DE DATOS
-
+data =full_join(data_ocupados, data_personas, by=c("SECUENCIA_P","ORDEN", "HOGAR", "DIRECTORIO"))
 
 
 ##6.DESCRIPTIVAS DE UN CONJUNTO DE DATOS
