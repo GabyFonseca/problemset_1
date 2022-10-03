@@ -25,7 +25,18 @@ data_ocupados = import(file="input/Enero - Cabecera - Ocupados.csv")
 export(data_personas, "output/Características generales (Personas).rds")
 export(data_ocupados, "output/Ocupados.rds")
 
+##GENERAR VARIABLES
+##Generar variable coupados
+data_ocupados$ocupados <- 1
 
+##Generar variable joven 
+data_personas$joven <- ifelse(data_personas$P6040>18 & data_personas$P6040<28, yes=1, no=0)
+
+#ELIMINAR FILAS/COLUMNAS DE UN CONJUNTO DE DATOS
+
+##COMBINAR BASE DE DATOS
+
+##DESCRIPTIVAS DE UN CONJUNTO DE DATOS
 
 
 
